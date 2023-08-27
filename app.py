@@ -36,4 +36,4 @@ for col in df.columns:
 st.subheader('Pre-processed Input to the Model')
 st.table(df)
 
-st.subheader('Result: ', max(df))
+st.subheader('Result: ', df.to_numpy())
