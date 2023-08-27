@@ -25,11 +25,12 @@ def user_input_features():
 df = user_input_features()
 
 st.subheader('User Input parameters')
-st.write(df.to_dict())
+df_dict = df.to_dict()
+st.write(df_dict)
 
 for col in df.columns:
     if df[col].dtype != 'float64':
         df[col] = df[col].values.astype('float64')
 
 st.subheader('The biggest number is')
-st.subheader('Result: ', df.to_numpy())
+st.subheader('Result: ', df_dict['FIRST_NUMBER'])
