@@ -32,5 +32,5 @@ for col in df.columns:
     if df[col].dtype != 'float64':
         df[col] = df[col].values.astype('float64')
 
-st.subheader('The biggest number is')
-st.subheader('Result: ', df_dict['FIRST_NUMBER'])
+st.subheader('The biggest number is:')
+st.write(df_dict['FIRST_NUMBER'])
