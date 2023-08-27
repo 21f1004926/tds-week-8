@@ -11,9 +11,9 @@ TDS Week 8
 st.header('User Input Parameters')
 
 def user_input_features():
-    first_number = st.number_input("FIRST_NUMBER", step=1)
-    second_number = st.number_input("SECOND_NUMBER", step=1)
-    third_number = st.number_input("THIRD_NUMBER", step=1)
+    first_number = st.number_input("FIRST_NUMBER", min_value=0.0,max_value=2000000000.0)
+    second_number = st.number_input("SECOND_NUMBER", min_value=0.0,max_value=2000000000.0)
+    third_number = st.number_input("THIRD_NUMBER", min_value=0.0,max_value=2000000000.0)
 
     data = {'FIRST_NUMBER': first_number,
             'SECOND_NUMBER': second_number,
