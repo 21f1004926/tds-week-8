@@ -27,13 +27,9 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df.to_dict())
 
-#Preprocessing
-
 for col in df.columns:
     if df[col].dtype != 'float64':
         df[col] = df[col].values.astype('float64')
 
-st.subheader('Pre-processed Input to the Model')
-st.table(df)
-
+st.subheader('The biggest number is')
 st.subheader('Result: ', df.to_numpy())
